@@ -1,0 +1,2 @@
+ModelNet10 and ModelNet40 datasets can be found at 
+https://modelnet.cs.princeton.edu/
