@@ -1,24 +1,14 @@
-🔍 Project Overview
+What this project is about<br>
+This repo contains our work on 3D object recognition, built on top of the ORION neural network. We started by reproducing and testing the original architecture as a baseline, then explored how different optimizers (Adam, RMSprop) and loss functions affect training dynamics. From there, we modified the network itself by introducing highway blocks in two different configurations to see if we could squeeze out better performance on 3D data.
 
--Baseline: Implemented, tested and modified the original ORION neural network.
+What's inside<br>
+Datasets/ — the datasets used for training<br>
+Results/ — loss curves for each run (train and test)<br>
+Data preparation/ — a MATLAB script to convert CAD models into voxel grids (based on the lmb-freiburg orion pipeline)<br>
+3D_Object_Recognition.ipynb — the main notebook, with code and inline explanations<br>
+3D_Object_Recognition.py — standalone Python version of the same code<br>
+Progetto_deep_learning_Stefani_Minchella.pdf — our write-up with full details on methodology and results<br>
+README.md — you're reading it<br>
 
--Optimization: Experimented with multiple optimizers (Adam,RMSprop) and loss functions to study their effect on convergence and accuracy.
-
--Architecture Modification: Introduced changes to the network structure to enhance feature extraction and classification on 3D data, namely highway blocks in 2 different fashions.
-
-📂 Repository Structure
-├── Datasets/                                                            # Datasets that have been used to train the network
-├── Results/                                                             # Displayed the different train/test loss curves for each run
-├── Data preparation/lmb-freiburg orion master data_preparation-Modelnet # MATLAB function to convert CAD files to voxels
-├── 3D_Object_Recognition.ipynb                                          # Python Notbook with code and descriptions
-├── 3D_Object_Recognition.py                                             # Py file with code
-├── Progetto_deep_learning_Stefani_Minchella.pdf                         # Paper with detailed description of work and results
-└── README.md                                                            # Project documentation
-
-📊 Results
-
-Baseline ORION performance established as reference.
-
-Optimizer and loss function exploration highlighted trade-offs in speed vs. accuracy.
-
-Modified architecture achieved improved recognition on test datasets with a tradeoff of a higher complexity.
+How it went<br>
+The baseline gave us a solid reference point. Optimizer and loss function experiments revealed the usual speed-vs-accuracy tradeoffs. The modified architecture (with highway blocks) improved recognition accuracy on the test sets, though it comes with added model complexity.
